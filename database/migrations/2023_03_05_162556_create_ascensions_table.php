@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ascension', function (Blueprint $table) {
+        Schema::create('ascensions', function (Blueprint $table) {
             $table->bigInteger('code_Sommets')->unsigned();
-            $table->bigInteger('code_Abris')->unsigned();
-            $table->text('difficulte_Ascension')->nullable();
-            $table->bigInteger('duree_Ascension')->nullable();
+            $table->bigInteger('code_abris')->unsigned();
+            $table->text('difficulte_ascension')->nullable();
+            $table->bigInteger('duree_ascension')->nullable();
             $table->timestamps();
 
             $table->primary(['code_Sommets', 'code_Abris']);
 
-            $table->foreign('code_Sommets')->references('code_Sommets')->on('sommets')->onDelete('cascade');
-            $table->foreign('code_Abris')->references('code_Abris')->on('abris')->onDelete('cascade');
+            $table->foreign('code_sommets')->references('code_sommets')->on('sommets')->onDelete('cascade');
+            $table->foreign('code_abris')->references('code_abris')->on('abris')->onDelete('cascade');
         });
     }
 
