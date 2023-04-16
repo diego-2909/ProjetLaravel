@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    @extends('layouts.app')
+    @section('content')
     <h1>Modification d'un sommet</h1>
     <form method="POST" action="{{ route('sommets.update', $sommet->code_Sommets) }}">
         @csrf
@@ -23,6 +25,7 @@
         </div>
         <button type="submit">Modifier</button>
     </form>
+    @endsection
 </body>
 
 </html>

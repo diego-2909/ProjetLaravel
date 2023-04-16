@@ -18,7 +18,9 @@
 </head>
 
 <body>
-    <h1>Liste des ascensions</h1>
+    @extends('layouts.app')
+    @section('content')
+    <h4 class="titreactivite">Liste des ascensions</h4>
     <table class="table table-sm">
         <thead>
             <tr>
@@ -43,6 +45,7 @@
             @endforeach
         </tbody>
     </table>
+    @endsection
 </body>
 
 </html>

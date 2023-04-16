@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    @extends('layouts.app')
+    @section('content')
     <h1>Modification d'un ascension</h1>
     <form method="POST" action="{{ route('ascension.update', [$ascension->code_Sommets,$ascension->code_Abris]) }}">
         @csrf
@@ -31,6 +33,7 @@
         </div>
         <button type="submit">Modifier</button>
     </form>
+    @endsection
 </body>
 
 </html>

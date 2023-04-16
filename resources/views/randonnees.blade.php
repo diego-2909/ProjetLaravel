@@ -18,7 +18,9 @@
 </head>
 
 <body>
-    <h1>Liste des Randonnées</h1>
+    @extends('layouts.app')
+    @section('content')
+    <h4>Liste des Randonnées</h4>
     <table class="table table-sm">
         <thead>
             <tr>
@@ -45,6 +47,7 @@
             @endforeach
         </tbody>
     </table>
+    @endsection
 </body>
 
 </html>

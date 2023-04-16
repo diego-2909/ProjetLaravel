@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    @extends('layouts.app')
+    @section('content')
     <h1>Modification d'un guide</h1>
     <form method="POST" action="{{ route('guides.update', $guide->code_Guides) }}">
         @csrf
@@ -31,6 +33,7 @@
         </div>
         <button type="submit">Modifier</button>
     </form>
+    @endsection
 </body>
 
 </html>

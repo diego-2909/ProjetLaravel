@@ -18,7 +18,9 @@
 </head>
 
 <body>
-    <h1>Liste des guides</h1>
+    @extends('layouts.app')
+    @section('content')
+    <h4 class="titreactivite">Liste des guides</h4>
     <table class="table table-sm">
         <thead>
             <tr>
@@ -45,6 +47,7 @@
             @endforeach
         </tbody>
     </table>
+    @endsection
 </body>
 
 </html>
